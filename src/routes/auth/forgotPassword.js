@@ -7,8 +7,7 @@ const { sendResetPasswordEmail } = require("../../utils/resetPasswordEmail");
 const isProduction = process.env.NODE_ENV === "production";
 const baseUrl = isProduction ? "https://wordrops.com" : "http://localhost:3000";
 
-const USER_RESET_PASSWORD_SECRET =
-    process.env.USER_RESET_PASSWORD_SECRET || "secret_reset";
+const USER_RESET_PASSWORD_SECRET = process.env.USER_RESET_PASSWORD_SECRET;
 
 router.post("/", async (req, res) => {
     try {

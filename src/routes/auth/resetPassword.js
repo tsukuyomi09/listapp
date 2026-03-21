@@ -4,8 +4,7 @@ const { client } = require("../../database/db");
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 
-const USER_RESET_PASSWORD_SECRET =
-    process.env.USER_RESET_PASSWORD_SECRET || "secret_reset";
+const USER_RESET_PASSWORD_SECRET = process.env.USER_RESET_PASSWORD_SECRET;
 
 router.post("/", async (req, res) => {
     const { token, newPassword } = req.body;

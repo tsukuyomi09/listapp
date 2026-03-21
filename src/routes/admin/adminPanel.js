@@ -6,12 +6,6 @@ const { activeGames } = require("../../services/gameManager");
 
 router.post("/", async (req, res) => {
     const { username, password } = req.body;
-    console.log(`username: ${username}`);
-    console.log(`password: ${password}`);
-    console.log(`user.env: ${process.env.ADMIN_USERNAME}`);
-    console.log(`password.env: ${process.env.ADMIN_PASS}`);
-    console.log(username === process.env.ADMIN_USERNAME); // true o false?
-    console.log(password === process.env.ADMIN_PASS);
 
     if (
         username === process.env.ADMIN_USERNAME &&
